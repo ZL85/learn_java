@@ -14,12 +14,12 @@ public class SwapValue {
 
         //调用方法
         int i = 10;
-        int j = 10;
-        System.out.println("before swap: " + "i=" + i + " j=" + j);  //i=10 j=10
+        int j = 20;
+        System.out.println("before swap: " + "i=" + i + " j=" + j);  //i=10 j=20
 
         SwapValue swapValue = new SwapValue();
         swapValue.swap(i, j);
-        System.out.println("after swap: " + "i=" + i + " j=" + j);  //i=10 j=10
+        System.out.println("after swap: " + "i=" + i + " j=" + j);  //i=10 j=20
 
         Data data = new Data();
         data.m = 10;
