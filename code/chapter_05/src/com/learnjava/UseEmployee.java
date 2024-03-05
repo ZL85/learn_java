@@ -4,6 +4,7 @@ public class UseEmployee {
     public static void main(String[] args) {
         //创建实例
         Employee employee = new Employee();
+        System.out.println(employee);
 
         //给成员变量赋值
         employee.id = 1;
