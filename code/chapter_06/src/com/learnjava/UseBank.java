@@ -9,6 +9,7 @@ public class UseBank {
 
         bank.getCustomer(0).setAccount(new Account(1000));
         bank.getCustomer(0).getAccount().withdraw(50);
+        bank.getCustomer(0).getAccount().deposit(100);
 
         System.out.println("账户余额为：" + bank.getCustomer(0).getAccount().getBalance());
     }

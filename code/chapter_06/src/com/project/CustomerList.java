@@ -72,7 +72,7 @@ public class CustomerList {
      */
     public Customer[] getAllCustomers() {
         Customer[] customer = new Customer[totalNum];
-        for (int i = 0; i < customers.length; i++) {
+        for (int i = 0; i < customer.length; i++) {
             customer[i] = customers[i];
         }
         return customer;
