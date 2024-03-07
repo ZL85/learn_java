@@ -13,7 +13,5 @@ public class UseChinese {
         System.out.println(c1.nation);
         c2.nation = "uk";
         System.out.println(c2.nation);
-
-
     }
 }
