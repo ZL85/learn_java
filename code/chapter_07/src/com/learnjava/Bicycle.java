@@ -16,6 +16,4 @@ public class Bicycle extends Vehicle implements Power {
     public void power() {
         System.out.println("自行车用脚踩");
     }
-
-    ;
 }
