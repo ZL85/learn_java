@@ -1,10 +1,5 @@
-# 13_String类和基本数据类型、包装类间的转换
+package com.learnjava;
 
-基本数据类型、包装类 to String类：调用`String`类里重载的静态方法`valueOf()`。
-
-String类 to 基本数据类型、包装类：调用`包装类`里的静态方法`parseXxx()`。
-
-```java
 import org.junit.jupiter.api.Test;
 
 public class WrapperTest2 {
@@ -38,4 +33,3 @@ public class WrapperTest2 {
 //        int i2 = Integer.parseInt(str3);//java.lang.NumberFormatException: For input string: "1a"
     }
 }
-```

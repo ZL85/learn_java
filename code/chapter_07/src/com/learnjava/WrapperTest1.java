@@ -1,24 +1,8 @@
-# 12_包装类
+package com.learnjava;
 
-包装类：Java针对基本数据类型定义的相应的引用类型。
-
-| 基本数据类型 |  包装类   |
-| :----------: | :-------: |
-|     byte     |   Byte    |
-|    short     |   Short   |
-|     int      |  Integer  |
-|     long     |   Long    |
-|    float     |   Float   |
-|    double    |  Double   |
-|   boolean    |  Boolean  |
-|     char     | Character |
-
-基本数据类型与包装类之间的转换。
-
-```java
 import org.junit.jupiter.api.Test;
 
-public class WrapperTest {
+public class WrapperTest1 {
     // 基本数据类型 to 包装类
     @Test
     public void test1() {
@@ -126,5 +110,3 @@ class Account {
     double balance1;
     Double balance2;
 }
-```
-
