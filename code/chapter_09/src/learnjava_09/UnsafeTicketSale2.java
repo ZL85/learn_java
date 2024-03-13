@@ -8,7 +8,7 @@ public class UnsafeTicketSale2 {
 
         st21.setName("窗口1");
         st22.setName("窗口2");
-        st23.setName("窗口2");
+        st23.setName("窗口3");
 
         st21.start();
         st22.start();
