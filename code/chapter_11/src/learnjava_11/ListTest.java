@@ -1,12 +1,5 @@
-# 03_List接口
+package learnjava_11;
 
-[官方文档](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
-
-存储有序的可重复的数据。
-
-有序的话就会多一些根据索引进行的操作！
-
-```java
 import com.sun.jdi.IntegerValue;
 import org.junit.jupiter.api.Test;
 
@@ -55,5 +48,3 @@ public class ListTest {
 
     }
 }
-```
-
