@@ -1,8 +1,5 @@
-# 06_Collections工具类的使用
+package learnjava_11;
 
-参考操作数组的工具类`Arrays`，[`Collections`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html)是一个操作`Set`、 `List`和`Map`等集合的工具类。
-
-```java
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -82,5 +79,3 @@ public class CollectionsTest {
         System.out.println(list6);
     }
 }
-```
-

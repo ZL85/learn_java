@@ -1,18 +1,3 @@
-# 01_泛型概述
-
-在 Java 中，我们在声明方法时，当在完成方法功能时如果有未知的数据 需要参与，这些未知的数据需要在调用方法时才能确定，那么我们把这样的数据通过形参表示。在方法体中，用这个形参名来代表那个未知的数据，而调用者在调用时，对应的传入实参就可以了。
-
-受以上启发，JDK1.5 设计了泛型的概念。泛型即为“类型参数”，这个类型参数在声明它的类、接口或方法中，代
-表未知的某种通用类型。
-
-所谓泛型，就是允许在定义类、接口时通过一个“标识“表示类中某个“属性的类型“或者"某个方法的返回值或参数的类型"。这个类型参数将在使用时 (例如，继承或实现这个接口、创建对象或调用方法时) 确定 (即传入实际的类型参数，也称为类型实参)。
-
-在集合中使用泛型之前可能存在的问题：
-
-- 类型不安全，因为`add()`的参数是`Object`类型，意味着任何类型的对象都可以添加成功。
-- 需要使用强转操作，繁琐，还有可能导致`CLassCastException`异常。
-
-```java
 package learnjava_12;
 
 import org.junit.jupiter.api.Test;
@@ -79,7 +64,7 @@ public class GenericsTest {
         //jdk10新特性：局部变量类型推断
         var entrySet = map.entrySet();
         var iterator = entrySet.iterator();
-
+        
         while (iterator.hasNext()) {
             Map.Entry<String, Integer> entry = iterator.next();
             String key = entry.getKey();
@@ -87,8 +72,5 @@ public class GenericsTest {
             System.out.println(key + " : " + value);
         }
     }
-}
-```
 
-使用说明：
-集合框架在声明接口和其实现类时，使用了泛型 (jdk5.0)，在实例化集合对象时如果没有使用泛型，则认为操作的是`Object`类型的数据。如果使用了泛型，则需要指明泛型的具体类型。一旦指明了泛型的具体类型，则在集合的相关的方法中，凡是使用类的泛型的位置，都替换为具体的泛型。
+}
