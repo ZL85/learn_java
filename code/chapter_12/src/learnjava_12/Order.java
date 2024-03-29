@@ -1,5 +1,7 @@
 package learnjava_12;
 
+import java.util.ArrayList;
+
 public class Order<T> {
     //声明了泛型参数以后就可以在类里面使用此泛型参数
     T t;
@@ -41,5 +43,19 @@ public class Order<T> {
 //    public static void show(T t){
 //        System.out.println(t);
 //    }
+
+    //自定义泛型方法
+    public <E> E method(E e) {
+        return null;
+    }
+
+    //定义泛型方法，将E[]数组元素添加到对于类型的Arrayist中，并返回
+    public <E> ArrayList<E> copyElements(E[] arr) {
+        ArrayList<E> list = new ArrayList<>();
+        for (E e : arr) {
+            list.add(e);
+        }
+        return list;
+    }
 
 }
