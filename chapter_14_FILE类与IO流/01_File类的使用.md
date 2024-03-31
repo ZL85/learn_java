@@ -30,7 +30,7 @@ public void test1() {
 }
 ```
 
-- 方法：`getName()`、`	getPath()`、`getAbsolutePath()`、`getAbsoluteFile()`、`getParent()`、`length()`、`lastModified()`、`	list()`、`listFiles()`、`renameTo(File dest)`、`exists()`、`isDirectory()`、`isFile()`、`canRead()`、`canWrite()`、`isHidden()`、`createNewFile()`、`mkdir()`、`mkdirs()`、`delete()`、、、、、。
+- 方法：`getName()`、`	getPath()`、`getAbsolutePath()`、`getAbsoluteFile()`、`getParent()`、`length()`、`lastModified()`、`	list()`、`listFiles()`、`renameTo(File dest)`、`exists()`、`isDirectory()`、`isFile()`、`canRead()`、`canWrite()`、`isHidden()`、`createNewFile()`、`mkdir()`、`mkdirs()`、`delete()`。
 
 ```java
 //常用方法
