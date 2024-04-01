@@ -1,12 +1,5 @@
-# 02_InetAdress类的使用
+package learnjava_15;
 
-[`InetAdress`](https://docs.oracle.com/javase/8/docs/api/java/net/InetAddress.html)类的一个实例就代表一个具体的 IP 地址。
-
-`getByName(String host)`、`	getLocalHost()`方法实例化`InetAddress`对象。
-
-常用方法：`getHostName()`、`getHostAddress()`。
-
-```java
 import org.junit.jupiter.api.Test;
 
 import java.net.InetAddress;
@@ -46,5 +39,3 @@ public class InetAddressTest {
         }
     }
 }
-```
-
