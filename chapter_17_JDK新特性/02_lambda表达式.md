@@ -45,6 +45,10 @@ public class LambdaTest {
         //Lambda写法
         Comparator<Integer> com2 = (o1, o2) -> Integer.compare(o1, o2);
         System.out.println(com2.compare(12, 21));
+                
+        //方法引用
+        Comparator<Integer> com3 = Integer::compare;
+        System.out.println(com3.compare(12, 21));
     }
 
     @Test

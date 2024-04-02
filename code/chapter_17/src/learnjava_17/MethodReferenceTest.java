@@ -1,14 +1,3 @@
-# 04_方法引用
-
-方法引用是基于`lambda`表达式的进一步刻画。
-
-方法引用作为函数式接口的实例。
-
-- `对象::实例方法名`：要求函数式接口中的抽象方法`a`与其内部实现时调用的对象的某个方法`b`的形参列表和返回值类型都相同，此时可以考虑使用方法`b`实现对方法`a`的替换或覆盖。注意方法`b`是非静态方法，需要对象来调用。
-- `类::静态方法名`：要求函数式接口中的抽象方法`a`与其内部实现时调用的类的某个静态方法`b`的形参列表和返回值类型都相同，此时可以考虑使用方法`b`实现对方法`a`的替换或覆盖。注意方法`b`是静态方法，需要类来调用。
-- `类::实例方法名`：要求函数式接口中的抽象方法`a`与其内部实现时调用的对象的某个方法`b`的返回值类型相同，同时方法`a`中有n个参数，方法`b`中有n-1个参数，且方法`a`的第一个参数作为方法`b`的调用者且抽象方法`a`的后n-1个参数与方法`b`的n-1个参数的类型相同或一致，则可以考虑使用方法`b`实现对方法`a`的替换或覆盖。注意方法`b`是非静态方法，需要对象来调用，但形式上写成对象`a`所属的类。
-
-```java
 package learnjava_17;
 
 import org.junit.jupiter.api.Test;
@@ -95,12 +84,9 @@ public class MethodReferenceTest {
     public void test6() {
         Function<Employee, String> fun1 = e -> e.getName();
         System.out.println(fun1.apply(new Employee("Tom", 12)));
-
         System.out.println("-".repeat(100));
 
         Function<Employee, String> fun2 = Employee::getName;
         System.out.println(fun2.apply(new Employee("Tom", 12)));
     }
 }
-```
-

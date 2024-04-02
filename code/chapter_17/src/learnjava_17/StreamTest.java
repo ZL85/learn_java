@@ -1,23 +1,5 @@
-# 06_StreamAPI的使用
+package learnjava_17;
 
-Stream API 关注的是多个数据 (排序、查找、过滤、映射、遍历等) 的计算，面向CPU。集合关注的是数据的存储，面向内存。
-
-Stream API 对于集合类似于 SQL 对于数据表的查询。
-
-使用说明：
-
-- Stream 不会存储元素。
-- Stream 不会改变源对象，会返回一个持有结果的新 Stream。
-- Stream 是延迟执行的，它会等到需要结果时才执行，一旦执行操作终止，就执行中间操作链并产生结果。
-- Stream 一旦执行了终止操作就不能再调用其他中间操作或终止操作了。
-
-执行流程：
-
-- Stream 实例化。
-- 中间操作。
-- 执行终止操作。
-
-```java
 import org.junit.jupiter.api.Test;
 
 import javax.lang.model.type.ArrayType;
@@ -156,25 +138,37 @@ public class StreamTest {
         boolean allMatch = employees.stream().allMatch(e -> e.getAge() > 18);
         System.out.println(allMatch);
 
+        System.out.println();
+
         //anyMatch(Predicate p)：检查是否至少匹配一个元素
         boolean anyMatch = employees.stream().anyMatch(e -> e.getAge() > 18);
         System.out.println(anyMatch);
+
+        System.out.println();
 
         //noneMatch(Predicate p)：检查是否没有匹配所有元素
         boolean noneMatch = employees.stream().noneMatch(e -> e.getAge() > 18);
         System.out.println(noneMatch);
 
+        System.out.println();
+
         //findFirst()：返回第一个元素
         Employee employee = employees.stream().findFirst().get();
         System.out.println(employee);
+
+        System.out.println();
 
         //findAny()：返回当前流中的任意元素
         Employee employee1 = employees.parallelStream().findAny().get();
         System.out.println(employee1);
 
+        System.out.println();
+
         //count()：返回流中元素的总个数
         long count = employees.stream().count();
         System.out.println(count);
+
+        System.out.println();
 
         //max(Comparator c)：返回流中最大值
         //使用自然排序
@@ -182,10 +176,14 @@ public class StreamTest {
         double maxSalary = salaryStream.max(Double::compare).get();
         System.out.println(maxSalary);
 
+        System.out.println();
+
         //使用定制排序
         Stream<Employee> employeeStream = employees.stream();
         Employee employee2 = employeeStream.max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())).get();
         System.out.println(employee2);
+
+        System.out.println();
 
         //min(Comparator c)：返回流中最小值
         //使用自然排序
@@ -193,16 +191,20 @@ public class StreamTest {
         double minSalary = salaryStream1.min(Double::compare).get();
         System.out.println(minSalary);
 
+        System.out.println();
+
         //使用定制排序
         Stream<Employee> employeeStream1 = employees.stream();
         Employee employee3 = employeeStream1.min((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())).get();
         System.out.println(employee3);
 
+        System.out.println();
+
         //forEach(Consumer c)：内部迭代
         employees.stream().forEach(System.out::println);
     }
 
-    //终止操作二：规约
+    //终止操作二：归约
     @Test
     public void test8() {
         //reduce(T identity, BinaryOperator b)：可以将流中元素反复结合起来，得到一个值。返回T
@@ -210,6 +212,8 @@ public class StreamTest {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         Integer sum = list.stream().reduce(0, Integer::sum);
         System.out.println(sum);
+
+        System.out.println();
 
         //reduce(BinaryOperator b)：可以将流中元素反复结合起来，得到一个值。返回Optional<T>
         //练习2：计算公司所有员工工资的总和
@@ -236,5 +240,3 @@ public class StreamTest {
         set.forEach(System.out::println);
     }
 }
-```
-
