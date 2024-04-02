@@ -1,41 +1,5 @@
-# 01_反射机制的使用
+package learnjava_16;
 
-Reflection (反射) 是被视为动态语言的关键，反射机制允许程序在运行期间借助于 Reflection API 取得任何类的内部信息，并能直接操作任意对象的内部属性及方法。
-
-加载完类之后，在堆内存的方法区中就产生了一个 Class 类型的对象 (一个类只有一个 Class 对象)，这个对象就包含了完整的类的结构信息。我们可以通过这个对象看到类的结构，这个对象就像一面镜子，透过这个镜子看到类的结构，所以，我们形象的称之为反射。
-
-```java
-public class Person {
-    private String name;
-    public int age;
-
-    public Person() {
-    }
-
-    private Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public void show() {
-        System.out.println("I'm a person");
-    }
-
-    private String showNation(String nation) {
-        return "My nationality is " + nation;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
-}
-```
-
-```java
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Constructor;
@@ -108,5 +72,3 @@ public class ReflectionTest {
         }
     }
 }
-```
-

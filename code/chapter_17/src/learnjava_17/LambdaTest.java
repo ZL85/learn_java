@@ -1,8 +1,5 @@
-# 02_lambda表达式
+package learnjava_17;
 
-`lambda`表达式作为接口的实现类的对象，也可叫做匿名函数。
-
-```java
 import com.sun.source.doctree.StartElementTree;
 import org.junit.jupiter.api.Test;
 
@@ -95,5 +92,3 @@ public class LambdaTest {
         System.out.println(com2.compare(12, 21));
     }
 }
-```
-
